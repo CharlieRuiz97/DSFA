@@ -1,0 +1,184 @@
+--- 
+title: "Data Science con R: Fundamentos y Aplicaciones"
+author: "BEST: Behavioral Economics & Data Science Team"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+url: 'https\://bookdown.org/BEST/DATA-SCIENCE-CON-R-FUNDAMENTOS-Y-APLICACIONES/'
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: BESTDATASCIENCE/DATA-SCIENCE-CON-R-FUNDAMENTOS-Y-APLICACIONES
+description: "El mejor libro en español de ciencia de datos, libre y abierto."
+---
+
+
+# ¡Bienvenidos! {-}
+
+---
+
+```{block, type='learncheck', purl=FALSE}
+**Nota: El libro se encuentra en etapa de desarrollo. Este libro ha sido elaborado por  [BEST](http://http://BESteamperu.org).**
+```
+
+---
+
+<img src="https://cran.r-project.org/Rlogo.svg" alt="Drawing" style="height: 150px;"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://www.rstudio.com/wp-content/uploads/2014/07/RStudio-Logo-Blue-Gradient.png" alt="Drawing" style="height: 150px;"/>
+
+Hace unos años el término Data Science no era tan conocido ni utilizado por la comunidad internacional, y menos aún local (Perú). En realidad, era un término usado rara vez por los estadísticos y algunos miembros de la computación científica. Y es que nuestra sociedad a evolucionado, y con ellos ciertas necesidades. La Ciencia de Datos ha venido para quedarse, y en cualquier profesión (economistas, psicólogos, biólogos, administradores, etc) y en cualquier industria (alimentaria, bancaria, servicios, etc) se ha vuelto vital para ser competitivo.
+
+Este libro es acerca de los fundamentos de la ciencia de datos y R, ***la lingua franca en estadística***. Este libro es y será gratuito, siempre.
+
+## Introducción {-}
+
+*No sé R, tampoco R Studio ni Github y menos aún* ***Data Science***. *Necesito aprenderlos pero soy nuevo y no sé tampoco programar ¿Qué puedo hacer?* Si te preguntas a ti mismo esto, comienza con nuestra sección [Introducción para estudiantes](#intro-for-students).
+
+### Introducción para estudiantes {#intro-for-students .unnumbered}
+
+Este libro asume no prerrequisitos: ni algebra, ni cálculo, ni experiencia previa programando. Este libro tiene como finalidad ofrecer a los estudiantes la capacidad de analizar data y responder preguntas usando data de forma profesional.
+
+#### ¿Qué aprenderé de este libro? {-}
+
+Pasarás por aprender R, los comandos básicos y la lógica; entenderás los conceptos de ***Data Science*** y finalmente lo unirás todo para ser un R
+
+
+#### R {-}
+
+R se aprende en la cancha, pero para ello es necesario aprender la parte básica, motivarte a estudiarlo y usarlo. Este libro te ayudará! Aparte te comentará la fórmula secreta para aprenderlo de la mejor forma posible.
+
+#### El proceso de Data Science {-}
+
+#### La investigación reproducible {-}
+
+#### Nota final para estudiantes {-}
+
+### Introducción para docentes {#intro-for-professors .unnumbered}
+
+### About the authors {#sec:about-authors}
+
+Who we are!
+
+Chester Ismay           |  Albert Y. Kim
+:-------------------------:|:-------------------------:
+`r include_image(path = "images/ismay.png", html_opts = "height=200px", latex_opts = "width=40%")` | `r include_image(path = "images/kim.png", html_opts = "height=200px", latex_opts = "width=40%")`
+
+<!-- <img src="images/ismay.jpeg" alt="Drawing" style="height: 200px;"/>  |  <img src="images/kim.jpeg" alt="Drawing" style="height: 200px;"/> -->
+
+* Chester Ismay: Senior Curriculum Lead - DataCamp, Portland, OR, USA.
+    + Email: [chester.ismay@gmail.com](mailto:chester.ismay@gmail.com)
+    + Webpage: <http://chester.rbind.io/>
+    + Twitter: [old_man_chester](https://twitter.com/old_man_chester)
+    + GitHub: <https://github.com/ismayc>
+* Albert Y. Kim: Assistant Professor of Statistical & Data Sciences - Smith College, Northampton, MA, USA.
+    + Email: [albert.ys.kim@gmail.com](mailto:albert.ys.kim@gmail.com)
+    + Webpage: <http://rudeboybert.rbind.io/>
+    + Twitter: [rudeboybert](https://twitter.com/rudeboybert)
+    + GitHub: <https://github.com/rudeboybert>
+
+
+A la fecha nos encontramos en nueva revolución industrial, donde el nuevo **petróleo** es la información. ¿Quién no es usuario de Google, Facebook o Twitter? ¿Sabías que al leer estas líneas online o en pdf estás brindando datos también estás brindando información acerca de tus gustos? ¿Han escuchado o leído acerca del escándalo de [Cambridge Analytica](https://es.wikipedia.org/wiki/Cambridge_Analytica)? ¿Han escuchado que la [profesión más sexy de este siglo es ser Data Scientist](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century)?
+
+
+
+Este libro va dirigido a aquellos que están ingresando al mundo de la Ciencia de Datos, léase Data Science, y para aquellos que están conociendo la comunidad y la ***lingua franca en estadística***, ***R***. Esta publicación es y siempre será gratuita de forma online y es un libro en constante mejora para la comunidad.
+
+# Motivación {-}
+
+```{block1, type='rmdnote'}
+Information is the oil of the 21st century, and analytics is the combustion engine
+
+Peter Sondergaard, Senior Vice President at Gartner
+```
+
+A la fecha nos encontramos en nueva revolución industrial, donde el nuevo **petróleo** es la información. ¿Quién no es usuario de Google, Facebook o Twitter? ¿Sabías que al leer estas líneas online o en pdf estás brindando datos también estás brindando información acerca de tus gustos? ¿Han escuchado o leído acerca del escándalo de [Cambridge Analytica](https://es.wikipedia.org/wiki/Cambridge_Analytica)? ¿Han escuchado que la [profesión más sexy de este siglo es ser Data Scientist](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century)?
+
+Este libro va dirigido a aquellos que están ingresando al mundo de la Ciencia de Datos, léase Data Science, y para aquellos que están conociendo la comunidad y la ***lingua franca en estadística***, ***R***. Esta publicación es y siempre será gratuita de forma online y es un libro en constante mejora para la comunidad.
+
+
+## Estructura del libro {-}
+
+El libro se compone de 4 partes. Parte I cubre la parte introductoria. El *capítulo I* **Adam Smith, Padre de la Economía Conductual**, se enfoca en los orígenes de la economía y de la economía conductual, ambos teniendo a Adam Smith como padre de ambos campos de estudio. El *capítulo II* **De Economía Neoclásica a la Economía Conductual**, narra las principales diferencias entre ambas escuelas. Finalmente en el *capítulo III* **Economía Conductual VS Economía Experimental**, se enfoca en analizar las diferencias y las relaciones entre ambos términos que tocaremos a menuda en este libro.
+
+La Parte II...
+
+## Agradecimientos {-}
+
+Este libro es producto de una serie de personas y organizaciones a quien les debo mucho de mi crecimiento profesional y personal. En primer lugar, agradezco a BEST, por permitirme liderar este proyecto, cuya finalidad es generar conocimiento libre y de primer nivel. Agradezco también a mi Alma Mater, UNMSM, por los constantes retos y alegrías que me trajo a la vida y finalmente a mi familia, por apoyarme en cada momento de mi vida.
+
+
+```{block2, type='flushright', html.tag='p'}
+Arturo Chian  
+Lima, Peru
+```
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+<!--chapter:end:index.Rmd-->
+
+# Introduction {#intro}
+
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+<!--chapter:end:01-intro.Rmd-->
+
+# Literature
+
+Here is a review of existing methods.
+
+<!--chapter:end:02-literature.Rmd-->
+
+# Methods
+
+We describe our methods in this chapter.
+
+<!--chapter:end:03-method.Rmd-->
+
+# Applications
+
+Some _significant_ applications are demonstrated in this chapter.
+
+## Example one
+
+## Example two
+
+<!--chapter:end:04-application.Rmd-->
+
+# Final Words
+
+We have finished a nice book.
+
+<!--chapter:end:05-summary.Rmd-->
+
+`r if (knitr:::is_html_output()) '
+# References {-}
+'`
+
+<!--chapter:end:06-references.Rmd-->
+
