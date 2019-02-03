@@ -1,40 +1,31 @@
 # ¿Deseas contribuir en el libro? {#contribute}
 
-Thank you for reading my book about Interpretable Machine Learning.
-The book is under continuous development.
-It will be improved over time and more chapters will be added.
-Very similar to how software is developed.
+Gracias por leer nuestro libro de Data Science.
+El libro se encuentra bajo constante desarrollo, por lo que conforme pase el tiempo más capítulos y ejemplos, serán añadidos.
 
-All text and code for the book is open source and [available at github.com](https://github.com/christophM/interpretable-ml-book).
-On the Github page you can suggest fixes and [open issues](https://github.com/christophM/interpretable-ml-book/issues) if you find a mistake or if something is missing.
+El texto se encuentra disponible para comentarios específicos en
+[github.com](https://github.com/arturochian/DSFA).
+En la página de github puedes crear [issues](https://github.com/arturochian/DSFA/issues) si encuentras un error o un detalle específico por mejorar.
 
-If you want to help out even more, the issues page is also the best place to find problems to fix and a good way to contribute to the book.
-If you are interested in a larger contributions, please send me a message with your concrete idea: [christoph.molnar.ai@gmail.com](mailto:christoph.molnar.ai@gmail.com).
+Si deseas apoyar en el avance del libro, y no manejas mucho github, puedes escribirme un correo a [arturob.chian@gmail.com](mailto:arturob.chian).
 
 
 
-# Citing this Book {#cite}
+# Citando este libro {#cite}
 
-If you found this book useful for your blog post, research article or product, I would be grateful if you would cite this book.
-You can cite the book like this:
+Si encuentras útil este libro, agradeceré citar el documento de la siguiente forma
 
+    Chian, Arturo. "Data Science con R: Fundamentos y Aplicaciones", 2019. https://bookdown.org/BEST/DSFA/.
 
-    Chian, Arturo. "Interpretable machine learning. A Guide for Making Black Box Models Explainable", 2019. https://christophm.github.io/interpretable-ml-book/.
-
-Or use the following bibtex entry:
+O usando bibtex:
 
 
-    @book{molnar,
-      title      = {Interpretable Machine Learning},
-      author     = {Christoph Molnar},
-      publisher  = {https://christophm.github.io/interpretable-ml-book/},
-      note       = {\url{https://christophm.github.io/interpretable-ml-book/}},
-      year       = {2019},
-      subtitle   = {A Guide for Making Black Box Models Explainable}
+    @book{chian,
+      title      = {Data Science con R: Fundamentos y Aplicaciones},
+      author     = {Arturo Chian},
+      publisher  = {https://bookdown.org/BEST/DSFA/},
+      note       = {\url{https://bookdown.org/BEST/DSFA/}},
+      year       = {2019}
     }
 
 
-I am always curious about where and how interpretation methods are used in industry and research.
-If you use the book as a reference, it would be great if you wrote me a line and told me what for. 
-This is of course optional and only serves to satisfy my own curiosity and to stimulate interesting exchanges. 
-My mail is christoph.molnar.ai@gmail.com .

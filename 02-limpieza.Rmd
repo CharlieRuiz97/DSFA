@@ -19,9 +19,9 @@ Los principios de limpieza de datos proveen un estándar para limpiar la data pa
 
 Una base de datos limpia tiene las siguientes características:
 
-1.- Cada variable forma una columna.
-2.- Cada observación forma una fila.
-3.- Cada tipo de unidad observacional forma una tabla.
+* Cada variable forma una columna.
+* Cada observación forma una fila.
+* Cada tipo de unidad observacional forma una tabla.
 
 ## Principales problemas con base de datos sucias
 
@@ -35,6 +35,10 @@ Una base de datos limpia tiene las siguientes características:
 
 ### Una sola unidad observacional está almacenada en múltiples tablas
 
+## Casuísticas
 
-¡Próximamente podrás utilizar ejercicios para practicar este skill tan importante con data real de la SBS, SMV, INEI, BCRP, mensajes presindenciales y muchas otras fuentes!
+### Limpiando data de banco en la SBS
+
+
+¡Próximamente podrás utilizar más ejercicios para practicar este skill tan importante con data real de la SBS, SMV, INEI, BCRP, mensajes presindenciales y muchas otras fuentes!
 
