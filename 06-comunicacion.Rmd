@@ -1,0 +1,2 @@
+# Comunicando Resultados
+Aquí hablaremos más gráficos dinámicos, shinys y Rmarkdown!

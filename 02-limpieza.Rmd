@@ -1,0 +1,40 @@
+# Limpieza de Datos
+
+---
+```{block, type='learncheck', purl=FALSE}
+**Happy families are all alike; every unhappy family is unhappy in its own way**
+Leon Tolstoy
+
+```
+---
+
+La limpieza de datos es la parte dentro del proceso de la Ciencia de Datos que consume más tiempo. De acuerdo al paper de Dasu and Johnson (2003), el 80% del tiempo se  consume en limpieza de datos.
+
+¿Cómo aprender a limpiar data? Así como se aprende un nuevo lenguaje (alemán, francés, chino,etc), es necesario una cantidad importante de práctica y conocer los principios de la limpieza de datos
+
+
+## Principios de Limpieza de datos
+
+Los principios de limpieza de datos proveen un estándar para limpiar la data para no reinventar la rueda cada vez que tratamos de limpiar base de datos. La idea de la bases de datos limpias es hacer el análisis de datos más fácil, permitiendo enfocarnos en entender el problema y no la logística de la data.
+
+Una base de datos limpia tiene las siguientes características:
+
+1.- Cada variable forma una columna.
+2.- Cada observación forma una fila.
+3.- Cada tipo de unidad observacional forma una tabla.
+
+## Principales problemas con base de datos sucias
+
+### Las columnas son valores y no nombres de valores
+
+### Múltipes variables están almacenadas en una columna
+
+### Variables están almacenadas en filas y columnas
+
+### Múltipes tipos de unidades observacionales están almacenadas en la misma tabla
+
+### Una sola unidad observacional está almacenada en múltiples tablas
+
+
+¡Próximamente podrás utilizar ejercicios para practicar este skill tan importante con data real de la SBS, SMV, INEI, BCRP, mensajes presindenciales y muchas otras fuentes!
+

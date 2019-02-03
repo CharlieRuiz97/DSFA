@@ -1,0 +1,13 @@
+
+
+### R {-}
+
+R se aprende en la cancha, pero para ello es necesario aprender la parte básica, motivarte a estudiarlo y usarlo. Este libro te ayudará! Aparte te comentará la fórmula secreta para aprenderlo de la mejor forma posible.
+
+### El proceso de Data Science {-}
+
+### La investigación reproducible {-}
+
+### Nota final para estudiantes {-}
+
+## Introducción para docentes {#intro-for-professors .unnumbered}

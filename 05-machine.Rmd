@@ -1,0 +1,9 @@
+# Machine Learning
+
+---
+```{block, type='learncheck', purl=FALSE}
+**All models are wrong, but some are useful**
+George E. P. Box
+
+```
+---
