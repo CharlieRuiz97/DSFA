@@ -25,6 +25,8 @@ Una base de datos limpia tiene las siguientes características:
 
 ## Principales problemas con base de datos sucias
 
+Si bien cada de base de datos tiene sus propias particularidades, existen casos clásicos que lo veremos ahora, de tal forma el estudiante puede identificar los problemas y desarrollar la forma más eficiente de limpiar esa base de datos.
+
 ### Las columnas son valores y no nombres de valores
 
 ### Múltipes variables están almacenadas en una columna
@@ -37,7 +39,74 @@ Una base de datos limpia tiene las siguientes características:
 
 ## Casuísticas
 
+Una parte vital cuando uno aprende a lidiar con base de datos, es haciendo ejercicios. A continuación se brindará casuísticas y se le invitará al estudiante a desarrollarlas. En el mismo documento se encuentran los solucionarios respectivos.
+
 ### Limpiando data de banco en la SBS
+
+La tarea consiste en descargar un excel de indicadores financieros del sistema bancario de junio 2018 y crear un dataframe limpio. Durante este ejemplo está prohibido descargar manualmente el excel. El respectivo excel se puede descargar desde la web de la [SBS](http://www.sbs.gob.pe/app/stats_net/stats/EstadisticaBoletinEstadistico.aspx?p=1#) y luego accediendo a la pestaña, indicadores de las empresas bancarias y finalmente la opción Indicadores financieros.
+
+```{r eval=FALSE}
+# Objetivo: Descargar 1 archivo de la SBS ####
+#configura tu directorio de trabajo, es decir, donde deseas trabajar
+setwd("~/Caso SBS/")
+#copia la url de tu interés
+fileUrl <-  "http://intranet2.sbs.gob.pe/estadistica/financiera/2018/Junio/B-2401-jn2018.XLS"
+#usemos ?download.file para saber más de esta función
+# probemos primero el caso por default
+download.file(fileUrl,destfile="archivo malo.XLS")
+# probemos ahora con el wb
+download.file(fileUrl,destfile="archivo bueno.XLS",mode="wb")
+# ¿Por qué no funciona en el primer caso? A leer la documentación! Para archivos excel, es necesario descargarlo en modo wb.
+
+a<-readxl::read_xlsx("B-2401-jn2018.xls") # carguemos la data. Conoce más del paquete usando ?readxl
+?readxl
+View(a)
+
+# 2 Objetivo: Limpiar la data ####
+library(dplyr)
+library(tidyr)
+
+a<-readxl::read_xlsx("B-2401-en2018.xls",skip = 5) #quitamos 5 espacios
+View(a)
+a<-a[complete.cases(a),] # solo elegimos filas completas (sin vacios)
+View(a)
+options(scipen=999) # para desactivar la nomenclatura cientifica de números
+View(a)
+names(a)
+names(a)[10] #seleccionamos el valor 10
+a<-a[,-10] # quitamos la columna 10 #usa dplyr. Como ejercicio recuerda usar "-" y select
+
+
+names(a)<- c("variables", "BBVA","B. del Comercio", "BCP",
+             "Pichincha","BIF","Scotiabank",
+             "Citibank","Interbank","Mibanco",
+             "GNB","Falabella","Santander","Ripley","Azteca","Cencosud","ICBC",
+             "Total Empresas Financieras")
+View(a)
+
+exc = !names(a) %in% "variables" # una forma de elegir todo excepto una columna de un vector
+exc # va a aplicar todo excepto a la primera columna
+a[,exc] # ven? no aparece la columns "variables"
+a[,exc] = sapply(a[,exc],as.character) # lo convierto a character. Es buena practica convertir siempre a character tus datos numéricos y luego pasarlos a numeric recién. ¿Por qué? Porque a veces por alguna razón te puede salir tipo factor o character y tener problemas y no darte cuenta hasta el proceso de modelacion 
+a[,exc] = sapply(a[,exc],as.numeric) # lo convierto a numérico
+a[,exc] = round(a[,exc],2) #redondeo a 2 cifras
+View(a)
+
+a %>% gather() %>% View()
+a %>% gather(Bancos) %>% View()
+a %>% gather(Bancos,valores) %>% View()
+a %>% gather(Bancos,valores,-variables) %>% View()
+b<-a %>% gather(Bancos,valores,-variables)
+b %>% spread(variables,valores) %>% View()
+data.final<-b %>% spread(variables,valores)
+data.final$Periodo= as.Date("2018-08-31")
+data.final
+View(data.final)
+# Objetivo: Guardar la data ####
+
+saveRDS(data.final,file="midatalimpia.RDS")
+
+```
 
 
 ¡Próximamente podrás utilizar más ejercicios para practicar este skill tan importante con data real de la SBS, SMV, INEI, BCRP, mensajes presindenciales y muchas otras fuentes!
